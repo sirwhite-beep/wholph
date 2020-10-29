@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'icon-font/css/all.min.css' %}">
+</head>
+<body>
+{% include 'navbar.html' %}
+ <div class="jumbotron" style="height:130pt">
+      <div class="container" style="background-color:#ccc; height:130pt; margin-top:-48pt">
+          <img src="{% static 'img/logo plus.png' %}" style="width:110pt; margin-top:10pt; margin-left:100pt">
+
+          <div class="col-xs-12 text-center" style="margin-top:-100pt; margin-left:60pt"><h1 style="color:#28a745ab">WHOLPHINPLUS COPERATION</h1>
+          <div><H3 style="color:#e83e8c">THE FUTURE IS NOW</H3>
+          </div>
+              </div>
+          </div>
+          </div>
+
+<div class="container" style="width:500pt">
+    <div class="jumbotron">
+<center>
+        <h2 class="text-center" style="color:green" > RESULT MANAGEMENT</h2>
+        <h5><i>click on your photo below to access your test and exam scores</i></h5><br>
+    <div style="display:flex; justify-content:space-around">
+    <a href="{% url 'portal:emmalog' %}" ><img src="{% static 'img/emma.jpg' %}" style="width:100pt; height:100pt"></a>
+    <a href="{% url 'portal:christylog' %}" ><img src="{% static 'img/christy.jpg' %}" style="width:100pt; height:100pt"></a></div><br>
+
+    <div>
+      <a href="{% url 'portal:roblog' %}" ><img src="{% static 'img/20200920_085334.jpg' %}" style="width:100pt; height:100pt"></a>
+    <a href="{% url 'portal:imolog' %}" ><img src="{% static 'img/imo.jpg' %}" style="width:100pt; height:100pt"></a>
+    </div>
+    </center><br>
+      <p><h5><i><a href="http://anietiewholph.herokuapp.com" style="margin-left:300pt"> <i class="fas fa-paper-plane"> </i> go to site</a></i></h5>
+    </div>
+
+</div>
+
+
+
+<script src="{% static 'icon-font/js/all.js' %}"></script>
+</body>
+</html>

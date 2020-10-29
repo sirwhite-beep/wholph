@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+{% include 'navbar.html' %}
+ {% for com in christy %}
+ <center>
+     <p><h4><i>Hi {{user.username}}</i></h4>
+        <div class="jumbotron" style=" width:270pt">
+           <p ><h4 style="margin-top:-30pt"> Your scores are as follows:</h4><br>
+            <p><h5> Test &emsp;&emsp;&emsp;&emsp; Score</h5><br>
+
+            <h5> 1<sup>st</sup> &emsp;&emsp;&emsp;&emsp;&emsp; {{com.first_test}}</h5>
+            <h5> 2<sup>nd</sup> &emsp;&emsp;&emsp;&emsp;&emsp; {{com.second_test}}</h5><hr>
+            <h5> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{ com.total_test}}</h5>
+           <P> <h5>Exam &emsp;&emsp;&emsp;&emsp;{{com.exam}}</h5><hr>
+            <p><h5>Total(%) &emsp;&emsp;&emsp;{{com.total}}
+
+        </h5><br>
+            <h5> Grade&emsp;&emsp;&emsp;&emsp; {{com.grade}} </h5>
+            <p><h3 style="color:green">{{com.comment}}</h3><br>
+
+<h6><a href="{% url 'portal:view' %}" class="btn btn-success" style="display:flex; justify-content:flex-start">Go Home</a></h6>
+        </div>
+{% endfor %}
+     </center>
+
+</body>
+</html>
