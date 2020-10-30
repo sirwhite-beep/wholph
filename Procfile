@@ -1,1 +1,1 @@
-web: gunicorn raffle.wsgi 
+web: gunicorn wholph.wsgi --log-file -
